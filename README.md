@@ -24,10 +24,10 @@ This repository is licensed under the [Apache-2.0 License](LICENSE). All open-so
 If you find our work beneficial, please cite our work:
 
 ```
-@article{liu2023dynamic,
-  title={Dynamic llm-agent network: An llm-agent collaboration framework with agent team optimization},
-  author={Liu, Zijun and Zhang, Yanzhe and Li, Peng and Liu, Yang and Yang, Diyi},
-  journal={arXiv preprint arXiv:2310.02170},
-  year={2023}
+@article{he2025enhancing,
+  title={Enhancing Language Multi-Agent Learning with Multi-Agent Credit Re-Assignment for Interactive Environment Generalization},
+  author={He, Zhitao and Liu, Zijun and Li, Peng and Fung, May and Yan, Ming and Zhang, Ji and Huang, Fei and Liu, Yang},
+  journal={arXiv preprint arXiv:2502.14496},
+  year={2025}
 }
 ```
