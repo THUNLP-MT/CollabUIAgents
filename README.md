@@ -1,12 +1,18 @@
-<h1>Enhancing Multi-Agent Learning in Real-World Interactive Environments through Process Reward Decomposition</h1>
+<h1> Advancing Language Multi-Agent Learning with Credit Re-Assignment for Interactive Environment Generalization</h1>
 
 This is the official implementation of CollabUIAgents, a two-stage multi-agent learning framework for interactive environments.
 
 # Overview
 
-![Overview of our multi-agent learning framework](./assets/framework.png)
+![Illustration of (a) single-agent and (b) multi-agent learning for environment generalization.](./assets/top-case.pdf)
 
-The CollabUIAgents framework is designed to address the issues of sparse rewards and fixed roles in multi-agent learning. It operates without predefined roles, providing fine-grained rewards, and supports generalization across different environments. The framework is composed of two main stages: General Environmental Knowledge Learning and Multi-Agent Reinforcement Learning. In the first stage, the base model is adapted to the environment using curriculum learning on multi-level instruction data. In the second stage, a novel process reward decomposition strategy is introduced during reinforcement learning, allowing rewards to be distributed at both the agent and conversation round levels. This granular feedback fosters collaborative awareness among agents without predefined roles and improves learning efficacy. Experimental results show that our method significantly enhances the performance of multi-agent systems based on open-source models, achieving notable improvements both within and across domains, while also exhibiting strong cross-environment generalization capabilities. Moreover, our best-performing systems achieve results on par with or exceed those of the strong closed-source models, while maintaining the flexibility to be integrated with prompt-based multi-agent systems for future research.
+In single-agent learning, the agent could encounter obstacles when target environments are different from the training one, while in multi-agent learning, collaboration between agents might enable effective decision-making in both environments.
+
+![Overview of our multi-agent learning framework](./assets/UIAgent.pdf)
+
+The challenge of achieving both strong performance and good generalization has hindered the progress of multi-agent systems for interactive environments. To address these issues, we propose CollabUIAgents, a multi-agent reinforcement learning framework with a novel multi-agent credit re-assignment (CR) strategy, assigning process rewards with LLMs rather than environment-specific rewards and learning with synthesized preference data, in order to foster generalizable, collaborative behaviors among the role-free agents' policies (as shonw in Figure (a)).  Empirical results show that our framework improves both performance and cross-environment generalizability of multi-agent systems. Moreover, our 7B-parameter system achieves results on par with or exceed strong closed-source models, and the LLM that guides the CR. We also provide insights in using granular CR rewards effectively for environment generalization, and accommodating trained LLMs in multi-agent systems.
+
+The training data for agentic fine-tuning is synthesized automatically with a multi-agent data synthesis pipeline and consists of progressively complex instruction sets in three levels, designed to help agents build a strong foundation of environmental knowledge. The UI agent generates responses to synthesize queries faithfully, the adversarial agent generates negative samples, and the critic agent grades process rewards. As shown in Figure (b), given a task, the pipeline can autonomously collect data from each step covering basic environmental knowledge, simple instruction knowledge, and process preference knowledge in interactive environments.
 
 # License
 
