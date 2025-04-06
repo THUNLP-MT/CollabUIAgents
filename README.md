@@ -14,11 +14,15 @@ The challenge of achieving both strong performance and good generalization has h
 
 # CollabUIAgents
 
-The training data for agentic fine-tuning is synthesized automatically with a multi-agent data synthesis pipeline and consists of progressively complex instruction sets in three levels, designed to help agents build a strong foundation of environmental knowledge. The UI agent generates responses to synthesize queries faithfully, the adversarial agent generates negative samples, and the critic agent grades process rewards. As shown in Figure (b), given a task, the pipeline can autonomously collect data from each step covering basic environmental knowledge, simple instruction knowledge, and process preference knowledge in interactive environments. Our data collection pipeline is illustrated in Figure (b). The training dataset is publicly available at [ModelScope](https://modelscope.cn/datasets/ZhouHe/Agents_android_world_sample/summary), model training was implemented using [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory).
+The training data for agentic fine-tuning is synthesized automatically with a multi-agent data synthesis pipeline and consists of progressively complex instruction sets in three levels, designed to help agents build a strong foundation of environmental knowledge. The UI agent generates responses to synthesize queries faithfully, the adversarial agent generates negative samples, and the critic agent grades process rewards. As shown in Figure (b), given a task, the pipeline can autonomously collect data from each step covering basic environmental knowledge, simple instruction knowledge, and process preference knowledge in interactive environments. Our data collection pipeline is illustrated in Figure (b). The training dataset is publicly available at [ModelScope](https://modelscope.cn/datasets/ZhouHe/CollabUIAgents), model training was implemented using [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory).
 
 # License
 
 This repository is licensed under the [Apache-2.0 License](LICENSE). All open-sourced data is for resarch purpose only.
+
+# Acknowledgement
+
+The code is based on [AndroidWorld](https://github.com/google-research/android_world),  [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), and [GPTSwarm](https://github.com/metauto-ai/GPTSwarm).
 
 # Citation
 If you find our work beneficial, please cite our work:
