@@ -24,6 +24,7 @@ We are currently working on open-sourcing the code and models. The following com
 - [x] Model inference code
 - [ ] Detailed description
 - [ ] Model weights
+- [ ] Evaluation scripts
 
 # License
 
